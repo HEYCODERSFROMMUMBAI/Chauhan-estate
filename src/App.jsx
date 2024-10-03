@@ -1,13 +1,25 @@
 import React from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Profile from './pages/Profile'
+import Signin from './pages/Signin'
+import Signout from './pages/Signout'
 const App = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
-  )
+  return <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}>   </Route>
+      <Route path='/about' element={<About />}>   </Route>
+      <Route path='/profile' element={<Profile />}>   </Route>
+      <Route path='/signin' element={<Signin />}>   </Route>
+      <Route path='/signout' element={<Signout />}>   </Route>
+
+    </Routes>
+
+
+  </BrowserRouter>
+
+
 }
 
 export default App
